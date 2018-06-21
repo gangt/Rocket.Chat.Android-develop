@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="87dp"
+    android:layout_height="87dp"
+    android:layout_centerInParent="true"
+    android:background="@drawable/shape_progress_bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/pb_load"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@drawable/dialog_loading_im"
+        android:indeterminateOnly="true" />
+
+</LinearLayout>

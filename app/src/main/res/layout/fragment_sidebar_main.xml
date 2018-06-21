@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="chat.rocket.android.fragment.sidebar.SidebarMainFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/sidebar_top_bg" />
+
+    <LinearLayout
+        android:id="@+id/user_info_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/transparent"
+        android:elevation="2dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_16"
+        android:paddingLeft="@dimen/margin_16"
+        android:paddingRight="@dimen/margin_16"
+        android:paddingTop="@dimen/margin_16">
+
+        <ImageView
+            android:id="@+id/current_user_avatar"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:background="@drawable/ic_user_head" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:paddingLeft="5dp">
+
+            <TextView
+                android:id="@+id/current_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#080808"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:text="John Doe" />
+
+            <ImageView
+                android:id="@+id/current_user_status"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_alignTop="@+id/tv_user_status"
+                android:layout_marginTop="4dp"
+                android:src="@drawable/userstatus_away" />
+
+            <TextView
+                android:id="@+id/tv_user_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/current_user_name"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@id/current_user_status"
+                android:text="在线"
+                android:textColor="#6c6c6c"
+                android:textSize="10sp" />
+        </RelativeLayout>
+
+
+        <chat.rocket.android.widget.DownUpToggleView
+            android:id="@+id/toggle_user_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/search_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_info_container"
+        android:background="@color/transparent"
+        android:paddingBottom="@dimen/margin_16">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:layout_toLeftOf="@+id/iv_add_user"
+                android:layout_marginLeft="@dimen/margin_16"
+                android:layout_marginRight="5dp"
+                android:singleLine="true"
+                android:background="@drawable/sidebar_search_bg"
+                android:paddingLeft="30dp"
+                android:textColor="#080808"
+                android:textColorHint="#bebcbc"
+                android:textSize="14sp" />
+            <ImageView
+                android:id="@+id/iv_clear"
+                android:src="@drawable/back"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:layout_toLeftOf="@+id/iv_add_user"
+                android:layout_marginRight="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:id="@+id/iv_add_user"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/sidebar_search_bg"
+                android:src="@drawable/icon_add"
+                android:layout_marginRight="@dimen/margin_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="22dp"
+            android:src="@drawable/icon_srarch" />
+        <!--<android.support.v7.widget.SearchView-->
+        <!--android:id="@+id/search"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:iconifiedByDefault="false"-->
+        <!--app:queryHint="@string/spotlight_search" />-->
+    </FrameLayout>
+    <FrameLayout
+        android:layout_above="@+id/text_load_more_results"
+        android:layout_below="@+id/search_box"
+        android:layout_marginTop="-6dp"
+        android:background="#e2e2e2"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/include_empty_layout"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.ogaclejapan.smarttablayout.SmartTabLayout
+                android:id="@+id/viewpagertab"
+                android:layout_width="match_parent"
+                android:layout_height="33dp"
+                android:background="@android:color/white"
+                app:stl_customTabTextLayoutId="@layout/custom_tab"
+                app:stl_customTabTextViewId="@+id/custom_text2"
+                app:stl_defaultTabTextAllCaps="true"
+                app:stl_defaultTabTextColor="@color/color_43c6fa"
+                app:stl_defaultTabTextHorizontalPadding="24dp"
+                app:stl_defaultTabTextMinWidth="0dp"
+                app:stl_defaultTabTextSize="14sp"
+                app:stl_distributeEvenly="true"
+                app:stl_dividerThickness="1dp"
+                app:stl_dividerColor="#D1D0D1"
+                app:stl_indicatorColor="@color/color_43c6fa"
+                app:stl_indicatorCornerRadius="1dp"
+                app:stl_indicatorGravity="bottom"
+                app:stl_indicatorInFront="false"
+                app:stl_indicatorInterpolation="linear"
+                app:stl_indicatorThickness="2dp"
+                app:stl_indicatorWithoutPadding="false"
+                app:stl_overlineColor="#00000000"
+                app:stl_overlineThickness="0dp"
+                app:stl_underlineThickness="0dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#D1D0D1" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_search"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/room_list_container"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+    <TextView
+        android:id="@+id/text_load_more_results"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/colorPrimary"
+        android:gravity="center"
+        android:text="@string/spotlight_load_more_results"
+        android:visibility="gone" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/user_action_outer_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/user_info_container"
+        android:layout_marginTop="-6dp"
+        android:background="#E2E2E2"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/btn_status_online"
+                style="@style/sidebar_list_item"
+                android:drawableLeft="@drawable/userstatus_online"
+                android:drawablePadding="10dp"
+                android:text="@string/user_status_online"
+                android:textAppearance="?attr/textAppearanceListItemSmall"
+                android:textColor="#080808" />
+
+            <TextView
+                android:id="@+id/btn_status_away"
+                style="@style/sidebar_list_item"
+                android:drawableLeft="@drawable/userstatus_away"
+                android:drawablePadding="10dp"
+                android:text="@string/user_status_away"
+                android:textAppearance="?attr/textAppearanceListItemSmall"
+                android:textColor="#080808" />
+
+            <TextView
+                android:id="@+id/btn_status_busy"
+                style="@style/sidebar_list_item"
+                android:drawableLeft="@drawable/userstatus_busy"
+                android:drawablePadding="10dp"
+                android:text="@string/user_status_busy"
+                android:textAppearance="?attr/textAppearanceListItemSmall"
+                android:textColor="#080808" />
+
+            <TextView
+                android:id="@+id/btn_status_invisible"
+                style="@style/sidebar_list_item"
+                android:drawableLeft="@drawable/userstatus_offline"
+                android:drawablePadding="10dp"
+                android:text="@string/user_status_invisible"
+                android:textAppearance="?attr/textAppearanceListItemSmall"
+                android:textColor="#080808" />
+
+            <!--<chat.rocket.android.widget.DividerView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/btn_logout"
+                style="@style/sidebar_list_item"
+                android:orientation="horizontal">
+
+                <!--<FrameLayout-->
+                <!--android:layout_width="48dp"-->
+                <!--android:layout_height="match_parent">-->
+
+                <!--<io.github.yusukeiwaki.android.widget.FontAwesomeTextView-->
+                <!--android:layout_width="16dp"-->
+                <!--android:layout_height="16dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:gravity="center"-->
+                <!--android:text="@string/fa_sign_out"-->
+                <!--android:textSize="14dp" />-->
+                <!--</FrameLayout>-->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_account" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:text="@string/fragment_sidebar_main_logout_title"
+                    android:textAppearance="?attr/textAppearanceListItemSmall"
+                    android:textColor="#080808" />
+            </LinearLayout>
+
+            <!--<chat.rocket.android.widget.DividerView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content" />-->
+
+            <TextView
+                android:id="@+id/version_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/margin_8"
+                android:visibility="gone"
+                tools:text="Version: 1.0" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

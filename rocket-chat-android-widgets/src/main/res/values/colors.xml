@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="color_accent">#FF2D91FA</color>
+  <color name="colorPrimary">#044b76</color>
+  <color name="colorPrimaryDark">#FFF</color>
+  <color name="color_shadow">#FFE6E6E7</color>
+  <color name="color_icon_composer">#FFA8A8A8</color>
+
+  <color name="color_timestamp">#FFA8A8A8</color>
+  <color name="color_embed_hostname">@color/color_timestamp</color>
+
+  <color name="color_alert">#FFF44336</color> <!-- Red 500-->
+  
+  <!-- User status colors-->
+  <color name="color_user_status_online">#FF4CAF50</color> <!-- Green 500 -->
+  <color name="color_user_status_busy">#FFF44336</color> <!-- Red 500-->
+  <color name="color_user_status_away">#FFFFC107</color> <!-- Amber 500-->
+  <color name="color_user_status_offline">#FF607D8B</color> <!-- Blue Grey 500-->
+  <color name="serverstatus_selected">#FFFFFFFF</color>
+  <color name="serverstatus_outline">#c2c2c2</color>
+  <color name="bg_horizontal_line_color">#80a3a4a7</color>
+
+  <color name="bg_indicator_point_normal">#D8D8D8</color>
+  <color name="bg_indicator_point_selected">#A6A6A6</color>
+  <color name="colorAccent">#FF4081</color>
+  <color name="white">#FFFFFF</color>
+
+  <color name="reply_button_disable">#f5f5f5</color>
+  <color name="reply_button_text">#dfFFFFFF</color>
+  <color name="reply_button_text_disable">#b8b8b8</color>
+  <color name="text_primary">#df000000</color>
+
+  <color name="bg_edittext_color">#00000000</color>
+
+  <color name="bg_horizontal_btn_normal">#eeeeee</color>
+  <color name="bg_horizontal_btn_selected">#70a3a4a7</color>
+
+  <color name="transparent">#00000000</color>
+
+
+  <color name="background">#F9F7F8</color>
+  <color name="background_gray1">#EBEBEB</color>
+  <color name="background_gray2">#E6E6E6</color>
+  <color name="background_gray3">#D4D4D4</color>
+  <color name="background_gray4">#EFEFF4</color>
+  <color name="line">#DDDDDD</color>
+  <color name="line_btn">#BBBBBB</color>
+  <color name="text_gray1">#777777</color>
+  <color name="text_gray2">#767676</color>
+  <color name="text_blue1">#1173CB</color>
+  <color name="text_blue2">#1173CA</color>
+  <color name="panel_black">#25272A</color>
+  <color name="black">#000000</color>
+  <color name="btn_red">#D63F41</color>
+  <color name="btn_red_hover">#E8484B</color>
+  <color name="btn_blue">#0F73CB</color>
+  <color name="btn_blue_hover">#1E86E4</color>
+  <color name="btn_text">#FFFFFF</color>
+  <color name="btn_text_hover">#CCFFFFFF</color>
+  <!--蒙版-->
+  <color name="colorMask">#66000000</color>
+  <color name="color_trans">#22000000</color>
+  <color name="color_f5">#f5f5f5</color>
+  <color name="color_39c3fa">#39c3fa</color>
+  <color name="color_bebcbc">#BEBCBC</color>
+  <color name="color_da4a4a">#DA4A4A</color>
+  <color name="color_title_black">#080808</color>
+  <color name="color_audio_time">#6D6C6C</color>
+  <color name="line2">#D1D0D1</color>
+  <color name="color_43c6fa">#43C6FA</color>
+  <color name="color_080808">#080808</color>
+
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:id="@+id/audio_small_view"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/audio_scale_view"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="85dp"
+        android:layout_height="108dp"
+        >
+         <SurfaceView
+            android:id="@+id/audio_open_img"
+             android:layout_width="wrap_content"
+             android:layout_height="100dp"
+            />
+        <TextView
+            android:id="@+id/audio_scale_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="8sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="80dp"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            />
+
+    </FrameLayout>
+
+</RelativeLayout>
+

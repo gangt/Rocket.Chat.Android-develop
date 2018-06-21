@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ref_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:background="@drawable/right_paopao"
+    android:gravity="left"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_replay_child"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/color_title_black"
+        android:textSize="32px"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_symbol"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10px"
+            android:text="/@"
+            android:textColor="@color/color_audio_time"
+            android:textSize="20px"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_symbol"
+            android:layout_width="24px"
+            android:layout_height="24px"
+            android:layout_marginLeft="10px"
+            android:scaleType="fitXY"
+            android:src="@drawable/alt" />
+
+        <TextView
+            android:id="@+id/tv_target_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:text="小仙女"
+            android:textColor="@color/color_audio_time"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:text="20:15"
+            android:textColor="@color/color_audio_time"
+            android:textSize="24px" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_symbol">
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20px"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_title_black"
+            android:textSize="32px"
+            android:visibility="gone" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/image_reply"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:layout_gravity="left"
+            android:layout_marginRight="10px"
+            android:scaleType="centerCrop"
+            android:visibility="gone"
+             />
+
+        <LinearLayout
+            android:id="@+id/rl_files"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_file1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/unknow_file" />
+
+            <TextView
+                android:id="@+id/tv_file_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10px"
+                android:maxLines="3"
+                android:maxWidth="500px"
+                android:textColor="#080808"
+                android:textSize="24px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/child_rl_message_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10px"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ll_message_audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/highlight_background_with_grey_border"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15px">
+
+                <ImageView
+                    android:id="@+id/child_iv_massage_audio"
+                    android:layout_width="40px"
+                    android:layout_height="40px"
+                    android:src="@drawable/chatfrom_voice_playing_l3" />
+
+
+                <TextView
+                    android:layout_width="180px"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/child_tv_massage_audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10px"
+                android:textColor="@color/color_audio_time"
+                android:textSize="24px" />
+        </LinearLayout>
+
+        <cn.jzvd.JZVideoPlayerStandard
+            android:id="@+id/child_videoplayer"
+            android:layout_width="200px"
+            android:layout_height="300px"
+            android:padding="20px"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/child_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginBottom="5px"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="20px"
+        android:background="@color/line2"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_replay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10px"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/color_title_black"
+        android:textSize="32px"
+        android:visibility="gone" />
+
+</LinearLayout>

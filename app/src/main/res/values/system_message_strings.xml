@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="message_room_name_changed">房间名称被 %2$s 修改为: %1$s</string>
+    <string name="message_user_added_by"> %1$s 添加了 %2$s</string>
+    <string name="message_user_removed_by">%1$s 被 %2$s 移除</string>
+    <string name="message_user_left">%1$s离开频道.</string>
+    <string name="message_user_joined_channel">%1$s加入频道.</string>
+    <string name="message_welcome">欢迎 %s</string>
+    <string name="message_removed">消息被移除</string>
+    <string name="message_delete">%1$s撤回了一条消息</string>
+    <string name="room_changed_description">%1$s 将频道描述修改为 %2$s</string>
+    <string name="message_user_muted">%1$s 被 %2$s 禁止发言</string>
+    <string name="message_user_unmuted">%1$s 被 %2$s 解除发言</string>
+    <string name="message_role_added">%1$s 赋予了 %2$s 的 %3$s 角色</string>
+    <string name="message_role_removed">%1$s 移除了 %2$s 的 %3$s 角色</string>
+    <string name="message_update_topic">%1$s 将频道主题修改为 %2$s </string>
+    <string name="room_changed_host">%1$s 将频道主持人修改为 %2$s </string>
+    <string name="message_pinned">消息已固定</string>
+</resources>

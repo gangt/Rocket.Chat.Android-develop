@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/color_eaeaea"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_set_group"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_marginTop="32px"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_6d6c6c"
+            android:text="@string/set_group"
+            android:layout_weight="10"
+            android:textSize="14sp"  />
+        <Switch
+            android:id="@+id/s_set_group"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:switchMinWidth="10dp"
+            android:textOn=""
+            android:textOff=""
+            android:thumb="@drawable/drawable_thumb"
+            android:track="@drawable/drawable_track" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_set_manager"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_marginTop="1px"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_6d6c6c"
+            android:text="@string/set_manager"
+            android:layout_weight="10"
+            android:textSize="14sp"  />
+        <Switch
+            android:id="@+id/s_set_manager"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:switchMinWidth="10dp"
+            android:textOn=""
+            android:textOff=""
+            android:thumb="@drawable/drawable_thumb"
+            android:track="@drawable/drawable_track" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_lock_speak"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_marginTop="1px"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_6d6c6c"
+            android:text="@string/lock_speak"
+            android:layout_weight="10"
+            android:textSize="14sp"  />
+        <Switch
+            android:id="@+id/s_lock_speak"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:switchMinWidth="10dp"
+            android:textOn=""
+            android:textOff=""
+            android:thumb="@drawable/drawable_thumb"
+            android:track="@drawable/drawable_track" />
+    </LinearLayout>
+</LinearLayout>

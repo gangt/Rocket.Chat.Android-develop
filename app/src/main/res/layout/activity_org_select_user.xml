@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_eaeaea">
+
+    <include layout="@layout/activity_top_title" />
+
+    <include
+        layout="@layout/search_tab"/>
+    <FrameLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <include layout="@layout/include_empty_layout"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_search"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/white"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_user"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"/>
+
+    <indexablerv.IndexableLayout
+        android:id="@+id/indexableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:indexBar_selectedTextColor="#f33737"
+        app:indexBar_textColor="@android:color/black"
+        app:indexBar_textSize="14sp"
+        android:visibility="gone"
+        app:indexBar_textSpace="4dp" />
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/ll_oprationMember"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:textSize="14sp"
+            android:hint="@string/select_add_member"
+            android:textColorHint="@color/color_39c3fa"
+            android:textColor="@color/color_39c3fa"
+            android:gravity="center"
+            android:maxLines="1"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="@string/ok_cn"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:background="@color/color_39c3fa"/>
+    </LinearLayout>
+
+</LinearLayout>

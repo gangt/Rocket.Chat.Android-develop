@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_eaeaea"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/activity_top_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2px"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                layout="@layout/group_member"/>
+
+            <!--频道名称-->
+            <LinearLayout
+                android:id="@+id/ll_groupName"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_marginTop="17dp"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="76dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_08"
+                    android:text="@string/group_name"
+                    android:textSize="15sp"  />
+                <TextView
+                    android:id="@+id/tv_group_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_6b"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textSize="13sp"  />
+
+                <ImageView
+                    android:id="@+id/iv_groupName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/icon_right"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_eaeaea"/>
+
+
+
+            <!--频道创建者-->
+            <LinearLayout
+                android:id="@+id/ll_group_created"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="76dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_08"
+                    android:text="@string/group_created"
+                    android:textSize="15sp"  />
+                <TextView
+                    android:id="@+id/tv_group_created"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_6b"
+                    android:gravity="right"
+                    android:layout_weight="1"
+                    android:textSize="13sp"  />
+
+            </LinearLayout>
+
+            <!--频道主题-->
+            <LinearLayout
+                android:id="@+id/ll_groupTitle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:layout_marginTop="17dp"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="76dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_08"
+                    android:text="@string/group_title"
+                    android:textSize="15sp"  />
+                <TextView
+                    android:id="@+id/tv_group_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_6b"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textSize="13sp"  />
+
+                <ImageView
+                    android:id="@+id/iv_groupTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/icon_right"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_group_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="10dp"
+                android:layout_marginTop="1px"
+                android:background="@color/white" >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:textColor="@color/color_08"
+                    android:text="@string/group_des"
+                    android:gravity="center_vertical"
+                    android:textSize="15sp"  />
+                <TextView
+                    android:id="@+id/tv_group_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_6b"
+                    android:textSize="13sp"  />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_isBanned"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:paddingRight="16dp"
+                android:layout_marginTop="17dp"
+                android:paddingLeft="13dp"
+                android:visibility="visible"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/is_unSpeak"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_08"/>
+
+                <Switch
+                    android:id="@+id/s_isBanned"
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:switchMinWidth="10dp"
+                    android:textOn=""
+                    android:textOff=""
+                    android:thumb="@drawable/drawable_thumb"
+                    android:track="@drawable/drawable_track" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="1px"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:visibility="visible"
+                android:paddingRight="16dp"
+                android:paddingLeft="13dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/no_disturbing"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_08"/>
+
+                <Switch
+                    android:id="@+id/s_no_disturbing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="23dp"
+                    android:switchMinWidth="10dp"
+                    android:textOn=""
+                    android:textOff=""
+                    android:thumb="@drawable/drawable_thumb"
+                    android:track="@drawable/drawable_track" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/color_eaeaea"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_marginRight="13dp"
+                android:layout_marginLeft="13dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/btn_delete"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="39dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/group_blue_bg"
+                    android:text="@string/group_delete"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+                <Button
+                android:id="@+id/btn_exit"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="39dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/group_red_bg"
+                android:text="@string/group_exit"
+                android:textColor="@color/white"
+                android:visibility="visible" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

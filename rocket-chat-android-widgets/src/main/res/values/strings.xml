@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="message_composer_message_hint">Message</string>
+    <string name="click_to_load">Click to load</string>
+    <string name="no_channel_found">No channel found</string>
+    <string name="no_user_found">No user found</string>
+    <string name="app_name">EmotionKeyBoard</string>
+
+    <string name="btn_send">发送</string>
+    <string name="str_recorder_normal">按住说话</string>
+    <string name="str_recorder_recording">松开结束</string>
+    <string name="str_recorder_want_cancel">松开手指，取消发送</string>
+    <string name="set_mute_status">频道已设置为禁言状态</string>
+    <string name="set_lock_status">频道已经被锁定</string>
+    <string name="set_pause_status">会议已经暂停</string>
+    <string name="set_you_muted">你已经被禁言</string>
+    <string name="set_finish_status">会议已经结束</string>
+</resources>

@@ -1,0 +1,277 @@
+<resources>
+    <string name="app_name">威宁通</string>
+    <string name="app_name_chat">威宁通</string>
+    <string name="fragment_sidebar_main_favorite_title">FAVORITES</string>
+    <string name="fragment_sidebar_main_channels_title">CHANNELS</string>
+    <string name="fragment_sidebar_main_direct_messages_title">DIRECT MESSAGES</string>
+    <string name="fragment_sidebar_main_livechat_title">LIVECHAT</string>
+    <string name="user_status_online">在线</string>
+    <string name="user_status_away">离开</string>
+    <string name="user_status_busy">忙碌</string>
+    <string name="user_status_invisible">隐身</string>
+    <string name="user_status_offline">离线</string>
+    <string name="fragment_sidebar_main_logout_title">我的账户</string>
+    <string name="dialog_add_channel_name">name</string>
+    <string name="dialog_add_channel_private">private</string>
+    <string name="dialog_add_channel_read_only">read only</string>
+
+    <string name="fragment_room_list_pinned_message_title">Pinned Messages (%s)</string>
+    <string name="fragment_room_list_favorite_message_title">Favorite Messages (%s)</string>
+    <string name="fragment_room_list_file_list_title">File list (%s)</string>
+    <string name="fragment_room_list_member_list_title">Member list (%s)</string>
+    <string name="fragment_room_list_could_not_load_your_request">Could not load your request.\n%s.</string>
+    <string name="fragment_room_list_no_pinned_message_to_show">No pinned messages to show</string>
+    <string name="fragment_room_list_no_favorite_message_to_show">No favorite messages to show</string>
+    <string name="fragment_room_list_no_file_list_to_show">No file list to show</string>
+    <string name="fragment_room_list_no_member_list_to_show">No member list to show</string>
+
+    <string name="start_of_conversation">开始谈话</string>
+    <string name="sending">Sending…</string>
+    <string name="not_synced">Not synced</string>
+    <string name="failed_to_sync">Failed to sync</string>
+    <string name="failed_to_delete">删除失败</string>
+    <string name="failed_to_delete_message">这条消息此时不能删除。请稍后再试</string>
+    <string name="resend">重发</string>
+    <string name="discard">放弃</string>
+    <string name="ok">确定</string>
+
+    <plurals name="fmt_dialog_view_latest_message_title">
+        <item quantity="one">New %d message</item>
+        <item quantity="other">New %d messages</item>
+    </plurals>
+    <string name="dialog_view_latest_message_action">View</string>
+
+    <string name="file_uploading_title">上传中…</string>
+
+    <string name="dialog_user_registration_email">Email</string>
+    <string name="dialog_user_registration_username">Username</string>
+    <string name="sub_username">\@%s</string>
+    <string name="username">\@%s</string>
+    <string name="dialog_user_registration_password">Password</string>
+    <string name="fragment_home_welcome_message">Welcome to Rocket.Chat.Android\nSelect a channel from the drawer.</string>
+    <string name="fragment_input_hostname_hostname">Server</string>
+    <!--<string name="fragment_input_hostname_server_hint">open.rocket.chat</string>-->
+    <!--<string name="fragment_input_hostname_server_hint">http://172.19.5.78:3000</string>-->
+    <!--<string name="fragment_input_hostname_server_hint">http://172.19.5.82:3000</string>-->
+    <!--<string name="fragment_input_hostname_server_hint">http://ucp.xt.weilian.cn</string>-->
+    <string name="fragment_input_hostname_server_hint">http://172.19.7.103:3001</string>
+    <!--<string name="fragment_input_hostname_server_hint">http://172.19.6.170:3006</string>-->
+    <!--<string name="fragment_input_hostname_server_hint">http://test.ucp.suneee.weilian.cn</string>-->
+    <!--<string name="fragment_input_hostname_server_hint">http://ucp.wn.sunmath.cn</string>-->
+    <string name="fragment_input_hostname_connect">CONNECT</string>
+
+
+    <string name="fragment_login_username_or_email">Username or email</string>
+    <string name="fragment_login_password">Password</string>
+    <string name="fragment_login_sign_up">SIGN UP</string>
+    <string name="fragment_login_sign_in">SIGN IN</string>
+    <string name="fragment_retry_login_retry_title">RETRY</string>
+    <string name="fragment_retry_login_error_title">链接断开…</string>
+    <string name="server_config_activity_authenticating">验证中…</string>
+    <string name="home_fragment_title">Home</string>
+    <string name="fragment_sidebar_main_unread_rooms_title">UNREAD ROOMS</string>
+
+    <string name="doc_upload_message_spec_title">Attach file</string>
+    <string name="image_upload_message_spec_title">Attach image</string>
+    <string name="audio_upload_message_spec_title">Attach audio</string>
+    <string name="video_upload_message_spec_title">Attach video</string>
+
+    <string name="input_hostname_invalid_server_message">无效的服务器版本</string>
+    <string name="make_sure_your_server_version_is_up_to_date">Make sure your Rocket.Chat server version is up to date</string>
+    <string name="connection_error_try_later">有连接错误。请稍后尝试</string>
+    .
+
+    <string name="version_info_text">Version: %s</string>
+    <string name="two_factor_authentication_title">Two-factor authentication</string>
+    <string name="open_your_authentication_app_and_enter_the_code">Open your authentication app and enter the code</string>
+    <string name="two_factor_code">Two-factor code</string>
+    <string name="spotlight_search">Search</string>
+    <string name="spotlight_load_more_results">Load more results</string>
+    <string name="edit_message">Edit message</string>
+    <string name="message_options_no_message_info">Ooops. Something\'s up!</string>
+    <string name="message_options_no_permissions_info">你没有权限</string>
+
+    <string name="menu_pinned_messages">Pinned messages</string>
+    <string name="menu_favorite_messages">Favorite messages</string>
+    <string name="menu_file_list">File list</string>
+    <string name="menu_member_list">Member list</string>
+    <string name="add_new_team">Add new Team</string>
+
+    <string name="meeting_theme">会议主题：</string>
+    <string name="meeting_theme2">会议主题</string>
+    <string name="input_meeting_theme">请输入会议主题</string>
+    <string name="start_time">开始时间</string>
+    <string name="select_start_time">请选择开始时间</string>
+    <string name="end_time">结束时间</string>
+    <string name="select_end_time">请选择结束时间</string>
+    <string name="meeting_type">会议类型：</string>
+    <string name="select_meeting_type">请选择会议类型</string>
+    <string name="present_member">出席人员</string>
+    <string name="add_meeting_person">请添加出席人员</string>
+    <string name="meeting_issue">会议议题:</string>
+    <string name="input_meeting_issue">请填写议题</string>
+    <string name="meeting_encryption">会议加密</string>
+    <string name="meeting_remind">请留意会议开始时间、结束时间，并在会议关闭前填写会议总结。</string>
+    <string name="create">保存</string>
+    <string name="meeting_manager_group">会议管理群组</string>
+
+    <string name="channel_name">频道名称：</string>
+    <string name="input_channel_name">请输入频道名称</string>
+    <string name="subordinate_system">所属体系：</string>
+    <string name="select_subordinate_system">请选择所属体系</string>
+    <string name="add_member">添加人员：</string>
+    <string name="select_add_member">请添加人员</string>
+    <string name="is_unSpeak">是否禁言</string>
+    <string name="no_disturbing">消息免打扰</string>
+    <string name="superior_channel">上级频道</string>
+    <string name="work_community_group">工作交流群组</string>
+    <string name="channel_remind">为可操作按钮，点击可添加内容，添加人员项为多选项</string>
+
+    <string name="organization_name">组织名称：</string>
+    <string name="input_organization_name">请输入组织名称</string>
+    <string name="organization_control_group">组织管控群组</string>
+
+    <string name="my_account">我的账户</string>
+    <string name="account_safety">账户与安全</string>
+    <string name="community_ours">联系我们</string>
+    <string name="help_feedback">帮助与反馈</string>
+    <string name="current_version">当前版本:</string>
+
+    <string name="cancel">取消</string>
+    <string name="ok_cn">确定</string>
+    <string name="input_group_user">搜索群组名或用户名</string>
+    <string name="input_user">搜索用户名</string>
+    <string name="mark_search_content">指定搜索内容</string>
+    <string name="name">名字</string>
+    <string name="user">用户</string>
+    <string name="content">内容</string>
+    <string name="file">文件</string>
+    <string name="channel">频道</string>
+    <string name="picture">图片</string>
+    <string name="all_person">全部人员</string>
+    <string name="search_name">搜索姓名</string>
+    <string name="search_file_name">搜索文件名</string>
+
+    <string name="create_success">创建成功</string>
+    <string name="exit_edit">退出此次编辑？</string>
+    <string name="meeting_word">文字会议</string>
+
+    <string name="info_owner">个人信息</string>
+    <string name="info_name">姓名</string>
+    <string name="info_phone">手机</string>
+    <string name="info_landline">座机</string>
+    <string name="info_company">公司</string>
+    <string name="info_dept">部门</string>
+    <string name="info_position">职位</string>
+    <string name="info_role">角色</string>
+    <string name="info_current_time">当前时间</string>
+    <string name="info_create_time">创建时间</string>
+    <string name="info_last_login">上次登录</string>
+    <string name="info_lock_user">锁定用户</string>
+    <string name="info_video">视频</string>
+    <string name="info_call">电话</string>
+
+    <string name="group_info">群组信息</string>
+    <string name="group_name">频道名称</string>
+    <string name="input_info">输入信息</string>
+    <string name="group_title">频道主题</string>
+    <string name="group_created">频道创建者</string>
+    <string name="group_introduce">群组介绍</string>
+    <string name="group_delete">删除</string>
+    <string name="group_exit">退出</string>
+
+    <string name="update_group_name">修改信息</string>
+    <string name="please_input_content">请输入内容</string>
+    <string name="finish">完成</string>
+    <string name="update_finish">操作成功</string>
+    <string name="update_fail">操作失败</string>
+    <string name="group_member">群组成员</string>
+    <string name="delete_member">删除成员</string>
+
+    <string name="set_group">设为群主</string>
+    <string name="set_manager">设为管理员</string>
+    <string name="lock_speak">禁止发言</string>
+    <string name="look_more_member">查看更多群成员</string>
+
+    <string name="no_data">没有搜索到数据</string>
+    <string name="default_sort">默认排序</string>
+    <string name="online_sort">优先在线成员</string>
+    <string name="time_sort">按活跃时间</string>
+    <string name="fujian_list">附件列表</string>
+    <string name="select_remind">选择提醒的人</string>
+
+    <string name="meeting_zhuchiren">会议主持人</string>
+    <string name="add_meeting_zhuchiren">请添加会议主持人</string>
+    <string name="meeting_qiandao">会议签到</string>
+    <string name="group_des">描述</string>
+    <string name="search_chat_info">搜索信息</string>
+    <string name="file_view">文件预览</string>
+    <string name="open_file">用其他应用打开</string>
+    <string name="download">下载</string>
+    <string name="open_remind">文件暂不支持本地查看，请用其他应用打开</string>
+    <string name="group_created_meeting">会议创建人</string>
+    <string name="group_meeting_content">会议内容</string>
+    <string name="group_meeting_time">会议时间</string>
+    <string name="fujian">附件</string>
+
+    <string name="unread_msg_count">%s条未读消息</string>
+    <string name="already_qiandao">已签到</string>
+    <string name="meeting_pause">暂停会议</string>
+    <string name="meeting_finish">结束会议</string>
+    <string name="no_qiandao">未签到</string>
+    <string name="meeting_zongjie">会议总结</string>
+    <string name="meeting_history_title">历史会议</string>
+    <string name="meeting_history_hint">搜索会议名称、会议时间、创始人等</string>
+
+    <string name="group_member_count">群主、管理员(%s人)</string>
+    <string name="select_member">选择成员</string>
+    <string name="select_member_format">选择成员(%s)</string>
+    <string name="remove_from_group">从频道中移除</string>
+    <string name="count">(%s)</string>
+    <string name="org_count">已选择：%s人</string>
+
+
+    <string name="error_you_are_last_owner">You are the last owner. Please set new owner before leaving the room. [error-you-are-last-owner]</string>
+    <string name="last_owner">你是频道当前的拥有者，请先重设拥有者再离开频道。</string>
+    <string name="first_login">威宁通首次登陆，数据加载中……</string>
+    <string name="switch_login">切换登陆，数据加载中……</string>
+    <string name="company_switch_login">切换企业，数据加载中……</string>
+    <string name="search_current_user">搜索当前频道用户</string>
+    <string name="meetting_pauseorfinish_cannt_operate">会议已经暂停或终止，无法操作</string>
+    <string name="relay_title">选择一个会话</string>
+    <string name="relay_hint">搜索</string>
+
+
+    <string name="video_talk">视频通话</string>
+    <string name="audio_talk">语音通话</string>
+    <string name="talk_cancel">取消</string>
+    <string name="camera_reverse">切换语音聊天</string>
+    <string name="reverse">切换摄像头</string>
+    <string name="agora_app_id">249c170bf17b4052ae2fc51579cbd947</string>
+    <string name="remote_call_text">邀请你视频聊天...</string>
+    <string name="request_call_text">正在等待对方接受邀请</string>
+    <string name="no_response">对方无回应</string>
+    <string name="call_done">通话已结束</string>
+    <string name="mobile_not_here">对方手机可能不在身边，建议稍后再尝试</string>
+    <string name="call_cancel">已取消</string>
+    <string name="remote_call_cancel">对方已取消</string>
+    <string name="remote_call_refuse">对方已拒绝</string>
+    <string name="call_refuse">已拒绝</string>
+    <string name="mute">静音</string>
+    <string name="hang_up">挂断</string>
+    <string name="speakphone"> 免提</string>
+    <string name="calling">正在拨号中...</string>
+    <string name="remote_call_audio_text">邀请你语音会话</string>
+    <string name="dialing">拨号中...</string>
+    <string name="remote_cancel_done">对方已挂断, 通话已结束</string>
+    <string name="remote_refuse_audio_done">对方拒绝了你的语音通话请求</string>
+    <string name="remote_refuse_video_done">对方拒绝了你的视频通话请求</string>
+    <string name="change2audio">已切到音频通话，请使用听筒接听</string>
+    <string name="remote_change2audio">对方已切到音频通话，请使用听筒接听</string>
+    <string name="talk_quality_low">当前通话链接质量不佳</string>
+    <string name="net_error">网络连接异常</string>
+    <string name="is_talking">对方正在通话中,请稍后再拨</string>
+    <string name="permission_faild">应用权限获取失败</string>
+    <string name="net_not_wifi">你当前处于非WiFi环境下，继续将产生流量</string>
+
+</resources>

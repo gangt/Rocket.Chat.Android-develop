@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="chat.rocket.android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission
+        android:name="android.permission.DEVICE_POWER"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- <permission -->
+    <!-- android:name="chat.rocket.android.permission.C2D_MESSAGE" -->
+    <!-- android:protectionLevel="signature" /> -->
+    <!-- <uses-permission android:name="chat.rocket.android.permission.C2D_MESSAGE" /> -->
+    <application
+        android:name=".RocketChatApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="chat.rocket.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity android:name=".TestMainActivity" />
+
+        <activity
+            android:name=".activity.ChatMainActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.room.RoomActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.AddServerActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.business.MeetingManagerGroupActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.business.OrganizationControlGroupActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.business.WorkCommunicationGroupActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activity.business.MyAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.business.SearchGroupOrUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.business.SelectUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.business.BusinessBaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.business.MyInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.business.GroupInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.business.UpdateGroupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.business.DeleteUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.business.CunDangListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.business.MoreGroupMemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.business.FuJianActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.business.PlayerViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.business.SearchChatInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.business.FileViewActivity"
+            android:screenOrientation="portrait" />
+        <!-- 历史会议 -->
+        <activity
+            android:name=".activity.business.MeettingHistoryActivity"
+            android:screenOrientation="portrait" />
+        <!-- 转发 -->
+        <activity
+            android:name=".activity.business.RelayActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <!-- 网页 -->
+        <activity
+            android:name=".activity.business.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="me.iwf.photopicker.PhotoPickerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name="me.iwf.photopicker.PhotoPagerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".activity.business.MeetingGroupInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.business.QianDaoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.business.ZongJieActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.business.OrgSelectUserActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".activity.business.OrgDeleteUserActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".activity.business.LookMemberActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.business.SelectedAlertActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name=".service.RocketChatService" />
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="chat.rocket.android" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="chat.rocket.android" />
+            </intent-filter>
+        </receiver>
+
+        <!-- <receiver -->
+        <!-- android:name="com.google.firebase.iid.FirebaseInstanceIdInternalReceiver" -->
+        <!-- android:exported="false" /> -->
+
+        <service
+            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
+            android:exported="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".push.gcm.GCMIntentService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".push.gcm.GcmInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".push.PushManager$DeleteReceiver"
+            android:exported="false" />
+
+        <service android:name=".video.view.VideoService" />
+
+        <activity
+            android:name=".video.view.VideoChatActivity"
+            android:screenOrientation="portrait" />
+
+        <receiver
+            android:name=".push.PushManager$ReplyReceiver"
+            android:exported="false" />
+        <receiver android:name=".helper.NetWorkStateReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="12ac6e94f850aaffcdff52001af77ca415d06a43" />
+        <meta-data
+            android:name="design_width"
+            android:value="750" />
+        <meta-data
+            android:name="design_height"
+            android:value="1334" />
+
+    </application>
+
+</manifest>

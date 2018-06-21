@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/messageListRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:layout_gravity="right"
+    tools:context="chat.rocket.android.fragment.chatroom.RoomFragment">
+    <!--<FrameLayout-->
+    <!--android:layout_above="@+id/messageComposer"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+
+
+    <!--</FrameLayout>-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/messageRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/ll_room_unread"
+            android:background="#EAEAEA"
+            android:scrollbars="vertical" />
+        <chat.rocket.android.widget.message.MessageFormLayout
+            android:id="@+id/messageComposer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"/>
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/btn_qiandao"
+        android:layout_width="200px"
+        android:layout_height="80px"
+        android:text="@string/meeting_qiandao"
+        android:layout_margin="20dp"
+        android:textSize="14sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:background="@drawable/btn_blue_bg"
+        />
+    <LinearLayout
+        android:id="@+id/ll_room_unread"
+        android:orientation="horizontal"
+        android:background="@drawable/unread_text_bg"
+        android:layout_width="120dp"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentRight="true"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:layout_height="30dp">
+        <ImageView
+            android:src="@drawable/upup"
+            android:padding="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/tv_room_unread"
+            android:layout_width="match_parent"
+            android:text="90条未读消息"
+            android:textColor="@color/color_0cabeb"
+            android:textSize="12sp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:layout_height="30dp" />
+    </LinearLayout>
+</RelativeLayout>

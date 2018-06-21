@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="61dp"
+    android:background="@drawable/treeitem_conversation_bg"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_user_head"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:id="@+id/iv_user_head"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="13dp"
+            />
+
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/iv_current_user_status"
+        android:visibility="gone"
+        android:layout_toRightOf="@+id/rl_user_head"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp" />
+
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/iv_current_user_status"
+        android:layout_toLeftOf="@+id/tv_time"
+        android:layout_marginRight="10dp"
+        android:lines="1"
+        android:ellipsize="end"
+        android:text="张三"
+        android:textColor="@color/color_080808"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"
+        android:layout_toRightOf="@+id/rl_user_head"
+        android:text="王学毅(雷厉): 通用环境的用户中心"
+        android:textColor="#6B6B6B"
+        android:textSize="13sp" />
+
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="13dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:text="13:28"
+            android:textColor="#BEBCBC"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_time"
+            android:layout_marginTop="11dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/unread_count_background"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="9"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/rl_user_head"
+        android:background="@color/line" />
+</RelativeLayout>

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/top_shadow"
+    android:minHeight="48dp"
+    tools:context="chat.rocket.android.widget.message.MessageFormLayout">
+
+    <RelativeLayout
+        android:id="@+id/reply_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:visibility="visible">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/reply_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/ic_reply"
+            android:tint="@color/color_accent" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/reply_cancel"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/ic_close"
+            android:tint="@color/color_icon_composer" />
+
+        <TextView
+            android:id="@+id/reply_username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/reply_username"
+            android:layout_toEndOf="@+id/reply_thumb"
+            android:layout_toLeftOf="@+id/reply_cancel"
+            android:layout_toRightOf="@+id/reply_thumb"
+            android:layout_toStartOf="@id/reply_cancel"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/color_accent"
+            android:textStyle="bold"
+            tools:text="jane.doe" />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/reply_thumb"
+            android:layout_width="32dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/reply_message"
+            android:layout_alignTop="@+id/reply_username"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_toEndOf="@+id/reply_icon"
+            android:layout_toRightOf="@+id/reply_icon"
+            android:visibility="gone"
+            fresco:actualImageScaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/reply_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reply_username"
+            android:layout_toEndOf="@+id/reply_thumb"
+            android:layout_toLeftOf="@+id/reply_cancel"
+            android:layout_toRightOf="@+id/reply_thumb"
+            android:layout_toStartOf="@id/reply_cancel"
+            android:ellipsize="end"
+            android:maxLines="1"
+            tools:text="Message" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="4dp"
+        android:id="@+id/keyboard_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/reply_bar"
+        android:background="@drawable/top_shadow"
+        android:paddingLeft="6dp">
+
+        <ToggleButton
+            android:id="@+id/image_voice"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="bottom"
+            android:background="@android:color/transparent"
+            android:button="@drawable/chat_record_selector"
+            android:checked="true"
+            android:padding="4dp"
+            android:textOff=""
+            android:textOn="" />
+
+        <RelativeLayout
+            android:layout_marginLeft="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/ll_edit"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <chat.rocket.android.widget.message.ImageKeyboardEditText
+                    android:id="@+id/editor"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/editor_bg"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:minHeight="36dp"
+                    android:maxLines="5"
+                    android:minLines="1"
+                    android:padding="6dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:textSize="14sp"
+                    />
+                <ImageButton
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/button_send"
+                    android:layout_width="43dp"
+                    android:layout_height="36dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/send_message"  />
+            </LinearLayout>
+
+            <chat.rocket.android.widget.AudioRecorderButton
+                android:id="@+id/btn_speak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_recorder_normal"
+                android:clickable="true"
+                android:gravity="center"
+                android:minHeight="36dp"
+                android:layout_marginRight="6dp"
+                android:text="按住说话"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_opreation"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/keyboard_container"
+        android:background="@color/color_f5">
+
+        <ImageView
+            android:id="@+id/iv_biaoqing"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="center"
+            android:layout_marginLeft="16dp"
+            android:visibility="gone"
+            android:src="@drawable/send_biaoqing"  />
+        <ImageView
+            android:id="@+id/iv_camera"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="center"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/send_camera"  />
+        <ImageView
+            android:id="@+id/iv_gallery"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="center"
+            android:layout_marginLeft="20dp"
+            android:visibility="gone"
+            android:src="@drawable/photogallery"  />
+        <ImageView
+            android:id="@+id/iv_file"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="center"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/send_file"  />
+        <ImageView
+            android:id="@+id/iv_alert"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="center"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/send_alert"  />
+        <ImageView
+            android:id="@+id/iv_audio"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="center"
+            android:visibility="gone"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/send_audio"  />
+        <ImageView
+            android:id="@+id/iv_video"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="center"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/send_video"  />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_composer_muted"
+        android:background="@drawable/blue_stroke_bg"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_margin="10dp"
+        android:layout_height="40dp">
+        <ImageView
+            app:srcCompat="@drawable/muted"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/composer_muted"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/composer_muted"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:text="@string/set_mute_status"
+            android:textSize="16sp"
+            android:textColor="@color/color_title_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_alignParentRight="true"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:alpha="0.3"
+            android:background="@drawable/send_message"  />
+
+    </RelativeLayout>
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:background="@color/transparent"
+        android:layout_below="@+id/reply_bar"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        android:layout_height="78dp"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/emoticonPanel"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/ll_opreation"
+        android:visibility="gone"
+        android:background="@color/background_gray1">
+
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

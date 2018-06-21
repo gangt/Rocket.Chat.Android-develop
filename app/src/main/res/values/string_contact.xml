@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="contact_array">
+        <item>$^*张狗蛋</item>
+        <item>000王二</item>
+        <item>王世鸣</item>
+        <item>❤迷</item>
+        <item>boy</item>
+        <item>abc</item>
+        <item>123</item>
+        <item>丁德明</item>
+        <item>丁素琴</item>
+        <item>董荣柱</item>
+        <item>范惠</item>
+        <item>冯霞</item>
+        <item>伏严成</item>
+        <item>皋德华</item>
+        <item>皋歌</item>
+        <item>高艳</item>
+        <item>顾其兰</item>
+        <item>管小云</item>
+        <item>沈亚杰</item>
+        <item>盛静</item>
+        <item>吴萍</item>
+        <item>夏祥</item>
+        <item>肖丽丽</item>
+        <item>谢艳</item>
+        <item>徐海莲</item>
+        <item>徐进</item>
+        <item>徐丽云</item>
+        <item>徐萍</item>
+        <item>刘世佳</item>
+    </string-array>
+
+</resources>

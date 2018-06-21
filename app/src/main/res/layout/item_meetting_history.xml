@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+<ImageView
+    android:src="@drawable/history_meeting_icon"
+    android:background="@color/background_gray4"
+    android:layout_margin="30px"
+    android:layout_width="100px"
+    android:layout_height="100px" />
+    <RelativeLayout
+        android:padding="8px"
+        android:layout_width="match_parent"
+        android:layout_height="165px">
+
+        <TextView
+            android:id="@+id/tv_meetting_history_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:textSize="30px"
+            android:singleLine="true"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="15px"
+            android:textColor="@color/color_title_black"
+            android:text="测试标题" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:textSize="26px"
+            android:text="创建者" />
+
+        <TextView
+            android:id="@+id/tv_meetting_history_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView2"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_toEndOf="@+id/textView2"
+            android:layout_toRightOf="@+id/textView2"
+            android:textColor="@color/color_06acec"
+            android:textSize="26px"
+            android:text="米小玲（威宁集团）" />
+
+        <TextView
+            android:id="@+id/tv_meetting_history_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="22px"
+            android:layout_marginBottom="20px"
+            android:text="18-03-29 14：00-18-03-29 16：00" />
+
+        <Button
+            android:id="@+id/btn_meetting_history"
+            android:visibility="gone"
+            android:layout_width="126px"
+            android:layout_height="58px"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8px"
+            android:background="@drawable/btn_blue_bg"
+            android:textColor="@color/white"
+            android:textSize="22px"
+            android:text="重新开始" />
+        <View
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/line"/>
+    </RelativeLayout>
+</LinearLayout>

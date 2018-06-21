@@ -1,0 +1,256 @@
+apply plugin: 'com.android.application'
+//apply plugin: 'io.fabric'
+apply plugin: 'realm-android'
+
+repositories {
+//    maven { url 'https://maven.fabric.io/public' }
+//    maven { url 'https://github.com/uPhyca/stetho-realm/raw/master/maven-repo' }
+    maven { url 'https://github.com/WickeDev/stetho-realm/raw/master/maven-repo' }
+}
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.jakewharton.hugo'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+        // 防止在发布的时候出现因MissingTranslation导致Build Failed!
+        disable 'MissingTranslation'
+    }
+    defaultConfig {
+        applicationId "chat.rocket.android"
+        minSdkVersion 16
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 58
+        versionName "1.1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        release {
+            storeFile project.rootProject.file('Rocket.jks').getCanonicalFile()
+            storePassword System.getenv("KEYSTORE_PASSWORD")
+            keyAlias System.getenv("KEY_ALIAS")
+            keyPassword System.getenv("KEY_PASSWORD")
+        }
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "USE_CANARY", "true"
+            debuggable true
+            versionNameSuffix '-DEBUG'
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.debug
+        }
+
+        release {
+            buildConfigField "boolean", "USE_CANARY", "false"
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        //avoiding okio error: https://github.com/square/okhttp/issues/896
+        lintConfig file("lint.xml")
+    }
+
+    sourceSets {
+        debug {
+            manifest.srcFile 'src/debug/AndroidManifest.xml'
+        }
+
+        release {
+            manifest.srcFile 'src/release/AndroidManifest.xml'
+        }
+
+        test {
+            test.java.srcDirs += 'src/test/kotlin'
+            androidTest.java.srcDirs += 'src/androidTest/kotlin'
+        }
+    }
+
+    dexOptions {
+        if (System.getenv()["CIRCLECI"] as boolean) {
+            javaMaxHeapSize "1536M"
+            preDexLibraries false
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+ext {
+    stethoVersion = '1.5.0'
+    stethoOkhttp3Version = '1.5.0'
+    stethoRealmVersion = '2.2.2'
+    rxbindingVersion = '2.0.0'
+    rxlifecycleVersion = '2.1.0'
+    icepickVersion = '3.2.0'
+    permissionsdispatcherVersion = '2.4.0'
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    api project(':android-ddp')
+    api project(':rocket-chat-android-widgets')
+    api project(':persistence-realm')
+
+    //    --------------------------------------------------------------
+
+//        compile(name: 'android-ddp', ext: 'aar')
+//
+//        compile(name: 'log-wrapper', ext: 'aar')
+//
+//        compile(name: 'persistence-realm', ext: 'aar')
+//
+//        compile(name: 'rocket-chat-android-widgets', ext: 'aar')
+//
+//        implementation files('libs/rocket-chat-core.jar')
+//
+//
+//
+//        api "com.facebook.fresco:fresco:1.4.0"
+//
+//        api "com.facebook.fresco:imagepipeline-okhttp3:1.4.0"
+//
+//        api extraDependencies.okHTTP
+//
+//        api extraDependencies.textDrawable
+//
+//        api supportDependencies.annotation
+//
+//        api supportDependencies.cardView
+//
+//        api supportDependencies.designSupportLibrary
+//
+//        api supportDependencies.constraintLayout
+//
+//        api supportDependencies.supportV13
+//
+//        api supportDependencies.customTabs
+//
+//        api rxbindingDependencies.rxBinding
+//
+//        api rxbindingDependencies.rxBindingSupport
+//
+//        api "org.jetbrains.kotlin:kotlin-stdlib-jre8:$rootProject.ext.kotlinVersion"
+//
+//        implementation 'org.nibor.autolink:autolink:0.6.0'
+//
+//        implementation 'com.github.yusukeiwaki.android-widget:widget-fontawesome:0.0.1'
+//
+//        implementation 'com.caverock:androidsvg:1.2.1'
+//
+//        testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$rootProject.ext.kotlinVersion"
+//
+//        testImplementation "org.jetbrains.kotlin:kotlin-test:$rootProject.ext.kotlinVersion"
+//
+//        testImplementation 'junit:junit:4.12'
+//
+//        testImplementation "org.mockito:mockito-core:2.10.0"
+//
+//        compile 'com.github.promeg:tinypinyin:2.0.3'
+//
+//        compile 'com.github.promeg:tinypinyin-lexicons-android-cncity:2.0.3'
+//
+//        implementation extraDependencies.optional
+//
+//
+//
+//        implementation extraDependencies.rxJava
+//
+//        implementation extraDependencies.rxKotlin
+//
+//        implementation extraDependencies.boltTask
+//
+//
+//
+//        testImplementation "org.mockito:mockito-inline:2.8.9"
+//
+//
+//
+//        implementation extraDependencies.rxAndroid
+//
+//        testImplementation 'org.json:json:20170516'
+//
+//        testImplementation 'org.skyscreamer:jsonassert:1.5.0'
+
+    //    -------------------------------------------------------------------
+    implementation supportDependencies.multidex
+    implementation rxbindingDependencies.rxBindingAppcompact
+
+    implementation "com.trello.rxlifecycle2:rxlifecycle:$rxlifecycleVersion"
+    implementation "com.trello.rxlifecycle2:rxlifecycle-android:$rxlifecycleVersion"
+    implementation "com.trello.rxlifecycle2:rxlifecycle-components:$rxlifecycleVersion"
+    implementation 'nl.littlerobots.rxlint:rxlint:1.2'
+    implementation "frankiesardo:icepick:$icepickVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    annotationProcessor "frankiesardo:icepick-processor:$icepickVersion"
+    implementation "com.github.hotchemi:permissionsdispatcher:$permissionsdispatcherVersion"
+    annotationProcessor "com.github.hotchemi:permissionsdispatcher-processor:$permissionsdispatcherVersion"
+
+    implementation(extraDependencies.crouton) {
+        exclude group: 'com.android.support', module: 'support-v4'
+    }
+    implementation extraDependencies.androidJob
+    implementation extraDependencies.jstate
+    debugImplementation "com.facebook.stetho:stetho:$stethoVersion"
+    debugCompile "com.facebook.stetho:stetho-okhttp3:$stethoOkhttp3Version"
+    debugCompile "com.uphyca:stetho_realm:$stethoRealmVersion"
+    debugCompile 'com.tspoon.traceur:traceur:1.0.1'
+    testImplementation 'org.robolectric:robolectric:3.3'
+    testImplementation "org.jetbrains.kotlin:kotlin-reflect:$rootProject.ext.kotlinVersion"
+    testImplementation 'com.nhaarman:mockito-kotlin:1.5.0'
+    testImplementation 'org.amshove.kluent:kluent:1.14'
+    implementation('com.github.bumptech.glide:glide:4.5.0')
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.5.0'
+    compile 'com.google.code.gson:gson:2.8.2'
+    implementation(name: 'recyclertreeview-lib', ext: 'aar')
+    implementation(name: 'PhotoPicker', ext: 'aar')
+    implementation 'me.jessyan:progressmanager:1.5.0'
+    implementation 'cn.jzvd:jiaozivideoplayer:6.2.8'
+    implementation 'com.zhy:autolayout:1.4.5'
+    implementation 'com.contrarywind:Android-PickerView:4.1.2'
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.tencent.bugly:crashreport:latest.release'
+
+    implementation 'org.greenrobot:eventbus:3.0.0'
+    implementation 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.0'
+    implementation 'com.google.dagger:dagger:2.0'
+    compile 'io.agora.rtc:full-sdk:2.1.0'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    compile 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+}
